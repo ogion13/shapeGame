@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Test Game</title>
+    <style>
+    	body{
+    		margin: 0;
+    		padding: 0;
+    	}
+    	.game-data{
+    		user-select:none;
+    		height: 30px;
+    		overflow: hidden;
+    	}
+    	.game-data div{
+    		display: inline-block;
+    		height: 30px;
+    	}
+    	.wrap{
+    		border: 1px solid black;
+    		padding: 5px;
+    		box-sizing: border-box;
+    	}
+    	.content{
+    		max-width: 1333px;
+    		margin: 0 auto;
+    	}
+    	.button{
+    		border: 1px solid black;
+    		padding: 5px;
+    		box-sizing: border-box;
+    		font-weight: bold;
+    		font-size: 18px;
+    		height: 30px;
+    		cursor: pointer;
+    	}
+    	.button:hover{
+			transform: scale(0.95);
+    	}
+    </style>
+</head>
+
+<body>
+
+    <div class="content">
+    	<div class="game-data">
+    		<div class="wrap">
+    			<div>Total shapes:<span id="shapesAmount">0</span> </div>
+    		</div>
+    		<div class="wrap">
+    			<div>Total Square: <span id="shapesSquare">0</span></div>
+    		</div>
+    	</div>
+    	<div id="canvas"></div>
+    	<div class="game-data">
+    		<div id="shapesSelector">
+    			<div>Shapes per second</div>
+    			<div class="button degreaseButton">-</div>
+    			<div class="button increaseButton">+</div>
+    			<div class="computedVal">1</div>
+    		</div>
+    		<div id="gravitySelector">
+    			<div>Gravity</div>
+    			<div class="button degreaseButton">-</div>
+    			<div class="button increaseButton">+</div>
+    			
+    			<div class="computedVal">100</div>
+    		</div>
+    	</div>
+    </div>
+    <script src="dist/bundle.js"></script>
+</body>
+
+</html>
